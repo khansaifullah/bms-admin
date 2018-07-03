@@ -5,8 +5,8 @@ import { Quote } from '../Models/Quote';
 
 @Injectable()
 export class ShiftService {
-  baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
-  // baseUrl: String= 'https://nameless-plateau-38782.herokuapp.com/api';
+  // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+   baseUrl: String= 'https://nameless-plateau-38782.herokuapp.com/api';
   headers: Headers;
   options: RequestOptions;
 

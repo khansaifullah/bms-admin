@@ -6,8 +6,8 @@ import { User } from '../Models/User';
 @Injectable()
 export class UserslistService {
 
-  baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
- // baseUrl: String= 'https://wtcapplications.herokuapp.com';
+  // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+  baseUrl: String= 'https://wtcapplications.herokuapp.com';
   // baseUrl: String= 'http://localhost:3500';
   headers: Headers;
   options: RequestOptions;

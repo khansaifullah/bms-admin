@@ -6,8 +6,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class RouteService {
-  baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
- // baseUrl: String= 'https://nameless-plateau-38782.herokuapp.com/api';
+  // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+  baseUrl: String= 'https://nameless-plateau-38782.herokuapp.com/api';
   headers: Headers;
   options: RequestOptions;
 

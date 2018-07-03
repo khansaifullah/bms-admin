@@ -1213,7 +1213,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DriverService = (function () {
     function DriverService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -1411,7 +1412,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DriversService = (function () {
     function DriversService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -1703,7 +1705,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var LocationOnMapService = (function () {
     function LocationOnMapService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -1963,12 +1966,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginService = (function () {
-    //baseUrl: String= 'https://nameless-plateau-38782.herokuapp.com/api';
     // baseUrl: String= 'http://localhost:3500/';
     function LoginService(http) {
         // console.log("In constructor LoginService");
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9'
         }); // ... Set content type to JSON
@@ -2472,7 +2475,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var RouteService = (function () {
     function RouteService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -3280,7 +3284,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ShiftService = (function () {
     function ShiftService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -3499,7 +3504,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ShiftsService = (function () {
     function ShiftsService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        //baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -3754,7 +3760,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SmsService = (function () {
     function SmsService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
@@ -3885,7 +3892,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UserslistService = (function () {
     function UserslistService(http) {
         this.http = http;
-        this.baseUrl = 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://wtcapplications.herokuapp.com';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',
         }); // ... Set content type to JSON
