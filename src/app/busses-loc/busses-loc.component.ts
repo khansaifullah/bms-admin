@@ -36,6 +36,7 @@ export class BussesLocComponent implements OnInit {
     anchor: new google.maps.Point(32, 65),
     labelOrigin: new google.maps.Point(40, 33)
   };
+  let tempPosMap;
     this.driversService
     .getDrivers()
     .subscribe(
@@ -46,10 +47,18 @@ export class BussesLocComponent implements OnInit {
 
   // Creating Marker For Buss/Driver
       if (this.driversLength > 0) {
-        const tempPosMap = {
-          lat: this.drivers[0].loc[1],
-          lng: this.drivers[0].loc[0]
-          };
+
+        for (let t = 0; t < this.driversLength; t++) {
+
+          if (this.drivers[t].loc) {
+            tempPosMap = {
+              lat: this.drivers[t].loc[0],
+              lng: this.drivers[t].loc[1]
+              };
+              break;
+          }
+        }
+
           mapToUpdate = new google.maps.Map(document.getElementById('mapToUpdate'), {
           center: tempPosMap,
           zoom: 15
@@ -58,8 +67,8 @@ export class BussesLocComponent implements OnInit {
           if (this.drivers[d].loc) {
             console.log ('driver Lat : ' + d + this.drivers[d].loc[0]);
             console.log ('driver Long : ' + d + this.drivers[d].loc[1]);
-            const tempPos = {lat: this.drivers[d].loc[1],
-              lng: this.drivers[d].loc[0] };
+            const tempPos = {lat: this.drivers[d].loc[0],
+              lng: this.drivers[d].loc[1] };
             const driverName = this.drivers[d].name;
             console.log(this.drivers[d]._id + ' : ' + this.drivers[d].panic);
             if (this.drivers[d].panic === true) {
