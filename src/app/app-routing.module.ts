@@ -11,6 +11,7 @@ import { AuthGuardService } from './auth-guard.service';
 import { BussesLocComponent } from './busses-loc/busses-loc.component';
 import { DriversComponent } from './drivers/drivers.component';
 import { DriverComponent } from './driver/driver.component';
+import { RidersComponent } from './riders/riders.component';
 import { ShiftsComponent } from './shifts/shifts.component';
 import { ShiftComponent } from './shift/shift.component';
 import { SmsComponent } from './sms/sms.component';
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: 'driver',
     component: DriverComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'riders',
+    component: RidersComponent,
     canActivate: [AuthGuardService],
   },
   {

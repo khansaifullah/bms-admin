@@ -38,7 +38,11 @@ import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 import { RouteComponent } from './route/route.component';
+import { RidersComponent } from './riders/riders.component';
+import { RiderComponent } from './rider/rider.component';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe} from './busses-loc/filter.pipe';
 @NgModule({
   declarations: [AppComponent, HomeComponent, MessageComponent, RegistrationComponent, LoginComponent,
     SettingsComponent, AddressComponent, DashboardComponent,
@@ -51,8 +55,9 @@ import { RouteComponent } from './route/route.component';
      SmsComponent,
      LocationOnMapComponent,
      RouteComponent,
-
-
+     RidersComponent,
+     RiderComponent,
+     FilterPipe
     ],
   imports: [
     PopupModule.forRoot(),
@@ -68,6 +73,7 @@ import { RouteComponent } from './route/route.component';
     NavbarModule,
     FooterModule,
     FixedPluginModule,
+    Ng2SearchPipeModule
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyA-QoUrBCw1eZxMWkCRbmwDQs9K2Tk0vto'
     // }),

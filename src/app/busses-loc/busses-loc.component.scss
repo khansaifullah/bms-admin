@@ -105,3 +105,13 @@
     #target {
       width: 345px;
     }
+
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 0 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      // margin-left: 18px;
+    }

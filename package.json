@@ -36,6 +36,7 @@
     "core-js": "^2.4.1",
     "express": "^4.16.3",
     "ng2-opd-popup": "^1.1.21",
+    "ng2-search-filter": "^0.4.7",
     "path": "^0.12.7",
     "rxjs": "^5.4.2",
     "typescript": "~2.3.3",

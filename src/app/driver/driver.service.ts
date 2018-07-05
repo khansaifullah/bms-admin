@@ -28,7 +28,7 @@ export class DriverService {
     console.log ('in service Add driver : ' + driver);
     return this.http
     .post(this.baseUrl + '/users/register' ,  body ,  this.options)
-    .map(this.extractData);
+     .map(this.extractData);
 
     }
 

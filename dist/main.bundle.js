@@ -249,18 +249,20 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__busses_loc_busses_loc_component__ = __webpack_require__("../../../../../src/app/busses-loc/busses-loc.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__drivers_drivers_component__ = __webpack_require__("../../../../../src/app/drivers/drivers.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__driver_driver_component__ = __webpack_require__("../../../../../src/app/driver/driver.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shifts_shifts_component__ = __webpack_require__("../../../../../src/app/shifts/shifts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shift_shift_component__ = __webpack_require__("../../../../../src/app/shift/shift.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__sms_sms_component__ = __webpack_require__("../../../../../src/app/sms/sms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__location_on_map_location_on_map_component__ = __webpack_require__("../../../../../src/app/location-on-map/location-on-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__route_route_component__ = __webpack_require__("../../../../../src/app/route/route.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__riders_riders_component__ = __webpack_require__("../../../../../src/app/riders/riders.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shifts_shifts_component__ = __webpack_require__("../../../../../src/app/shifts/shifts.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shift_shift_component__ = __webpack_require__("../../../../../src/app/shift/shift.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__sms_sms_component__ = __webpack_require__("../../../../../src/app/sms/sms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__location_on_map_location_on_map_component__ = __webpack_require__("../../../../../src/app/location-on-map/location-on-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__route_route_component__ = __webpack_require__("../../../../../src/app/route/route.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -282,7 +284,7 @@ var routes = [
     },
     {
         path: 'dashboard',
-        component: __WEBPACK_IMPORTED_MODULE_11__dashboard_dashboard_component__["a" /* DashboardComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
@@ -296,13 +298,18 @@ var routes = [
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
+        path: 'riders',
+        component: __WEBPACK_IMPORTED_MODULE_8__riders_riders_component__["a" /* RidersComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
+    },
+    {
         path: 'shifts',
-        component: __WEBPACK_IMPORTED_MODULE_8__shifts_shifts_component__["a" /* ShiftsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_9__shifts_shifts_component__["a" /* ShiftsComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
         path: 'shift',
-        component: __WEBPACK_IMPORTED_MODULE_9__shift_shift_component__["a" /* ShiftComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_10__shift_shift_component__["a" /* ShiftComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
@@ -312,17 +319,17 @@ var routes = [
     },
     {
         path: 'sms',
-        component: __WEBPACK_IMPORTED_MODULE_10__sms_sms_component__["a" /* SmsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_11__sms_sms_component__["a" /* SmsComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
         path: 'addLocation/:shiftId',
-        component: __WEBPACK_IMPORTED_MODULE_12__location_on_map_location_on_map_component__["a" /* LocationOnMapComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_13__location_on_map_location_on_map_component__["a" /* LocationOnMapComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
         path: 'route/:shiftId',
-        component: __WEBPACK_IMPORTED_MODULE_13__route_route_component__["a" /* RouteComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_14__route_route_component__["a" /* RouteComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuardService */]],
     },
     {
@@ -482,6 +489,10 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__shared_navbar_navbar_module__ = __webpack_require__("../../../../../src/app/shared/navbar/navbar.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__shared_fixedplugin_fixedplugin_module__ = __webpack_require__("../../../../../src/app/shared/fixedplugin/fixedplugin.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__route_route_component__ = __webpack_require__("../../../../../src/app/route/route.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__riders_riders_component__ = __webpack_require__("../../../../../src/app/riders/riders.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__rider_rider_component__ = __webpack_require__("../../../../../src/app/rider/rider.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ng2_search_filter__ = __webpack_require__("../../../../ng2-search-filter/ng2-search-filter.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__busses_loc_filter_pipe__ = __webpack_require__("../../../../../src/app/busses-loc/filter.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -493,6 +504,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // import { AgmCoreModule } from '@agm/core';
+
+
+
+
 
 
 
@@ -540,6 +555,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_25__sms_sms_component__["a" /* SmsComponent */],
             __WEBPACK_IMPORTED_MODULE_26__location_on_map_location_on_map_component__["a" /* LocationOnMapComponent */],
             __WEBPACK_IMPORTED_MODULE_32__route_route_component__["a" /* RouteComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__riders_riders_component__["a" /* RidersComponent */],
+            __WEBPACK_IMPORTED_MODULE_34__rider_rider_component__["a" /* RiderComponent */],
+            __WEBPACK_IMPORTED_MODULE_36__busses_loc_filter_pipe__["a" /* FilterPipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_19_ng2_opd_popup__["b" /* PopupModule */].forRoot(),
@@ -554,6 +572,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_30__shared_navbar_navbar_module__["a" /* NavbarModule */],
             __WEBPACK_IMPORTED_MODULE_29__shared_footer_footer_module__["a" /* FooterModule */],
             __WEBPACK_IMPORTED_MODULE_31__shared_fixedplugin_fixedplugin_module__["a" /* FixedPluginModule */],
+            __WEBPACK_IMPORTED_MODULE_35_ng2_search_filter__["a" /* Ng2SearchPipeModule */]
+            // AgmCoreModule.forRoot({
+            //   apiKey: 'AIzaSyA-QoUrBCw1eZxMWkCRbmwDQs9K2Tk0vto'
+            // }),
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_8__rest_api_service__["a" /* RestApiService */], __WEBPACK_IMPORTED_MODULE_9__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_14__auth_guard_service__["a" /* AuthGuardService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]],
@@ -629,7 +651,7 @@ var _a;
 /***/ "../../../../../src/app/busses-loc/busses-loc.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content-wrapper add-padding\">\n  <div class=\"content-header clearfix\">\n  <h2 class=\"pull-left\" style=\"color:#232f3e; \">\n  Live Tracking\n  </h2>\n  </div>\n  <!-- <input id=\"pac-input\" class=\"controls\" type=\"text\" placeholder=\"Search Box\"> -->\n  <div id=\"mapToUpdate\" class=\"google-map\"></div>\n</div>\n"
+module.exports = "<div class=\"content-wrapper add-padding\">\n  <div class=\"content-header clearfix\">\n  <h2 class=\"pull-left\" style=\"color:#232f3e; \">\n  Live Tracking\n  </h2>\n  </div>\n  <div>\n      <!-- <input type=\"text\" [(ngModel)]=\"searchText\" name =\"inputField\">\n      <div *ngFor = \"let item of drivers | filter : searchText\" >\n        <p>\n          {{item.name}}\n        </p>\n      </div> -->\n      <!-- <input [(ngModel)]=\"searchText\" name =\"inputField\" placeholder=\"search text goes here\">\n        <ul>\n          <li *ngFor=\"let driver of drivers | filter : searchText\">\n            {{driver.name}}\n          </li>\n        </ul> -->\n        <!-- <div class=\"form-group\"> -->\n            <div>\n                <label for=\"authorName\" class=\"col-sm-2 control-label\">Select Driver</label>\n            </div>\n\n            <select  [(ngModel)]=\"selectedDriver\" (ngModelChange)=\"chkDriverName()\" name=\"selectedDriver\">\n              <option *ngFor=\"let d of drivers\"  value={{d._id}}> {{d.name}} </option>\n            </select>\n          <!-- </div> -->\n  </div>\n  <!-- <input id=\"pac-input\" class=\"controls\" type=\"text\" placeholder=\"Search Box\"> -->\n  <div id=\"mapToUpdate\" class=\"google-map\"></div>\n</div>\n"
 
 /***/ }),
 
@@ -641,7 +663,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\n  border-style: solid;\n  border-width: 5px;\n  border-color: #007872;\n  height: 450px;\n  width: 750px;\n  float: left;\n  margin: auto; }\n\n.map-wrapper {\n  padding-left: 30%; }\n\n.map-container {\n  margin: auto; }\n\n#mapToUpdate {\n  height: 500px; }\n\n.add-padding {\n  padding-left: 1%;\n  padding-right: 1%;\n  padding-top: 1%; }\n\n.labels {\n  color: red;\n  background-color: red;\n  font-family: \"Lucida Grande\", \"Arial\", sans-serif;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  width: 100px;\n  border: 0; }\n\n#description {\n  font-family: Roboto;\n  font-size: 15px;\n  font-weight: 300; }\n\n#infowindow-content .title {\n  font-weight: bold; }\n\n#infowindow-content {\n  display: none; }\n\n#mapToUpdate #infowindow-content {\n  display: inline; }\n\n.pac-card {\n  margin: 10px 10px 0 0;\n  border-radius: 2px 0 0 2px;\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  outline: none;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);\n  background-color: #fff;\n  font-family: Roboto; }\n\n#pac-container {\n  padding-bottom: 12px;\n  margin-right: 12px; }\n\n.pac-controls {\n  display: inline-block;\n  padding: 5px 11px; }\n\n.pac-controls label {\n  font-family: Roboto;\n  font-size: 13px;\n  font-weight: 300; }\n\n#pac-input {\n  background-color: #fff;\n  font-family: Roboto;\n  font-size: 15px;\n  font-weight: 300;\n  margin-left: 12px;\n  padding: 0 11px 0 13px;\n  text-overflow: ellipsis;\n  width: 100%; }\n\n#pac-input:focus {\n  border-color: #4d90fe; }\n\n#title {\n  color: #fff;\n  background-color: #4d90fe;\n  font-size: 25px;\n  font-weight: 500;\n  padding: 6px 12px; }\n\n#target {\n  width: 345px; }\n", ""]);
+exports.push([module.i, "agm-map {\n  border-style: solid;\n  border-width: 5px;\n  border-color: #007872;\n  height: 450px;\n  width: 750px;\n  float: left;\n  margin: auto; }\n\n.map-wrapper {\n  padding-left: 30%; }\n\n.map-container {\n  margin: auto; }\n\n#mapToUpdate {\n  height: 500px; }\n\n.add-padding {\n  padding-left: 1%;\n  padding-right: 1%;\n  padding-top: 1%; }\n\n.labels {\n  color: red;\n  background-color: red;\n  font-family: \"Lucida Grande\", \"Arial\", sans-serif;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  width: 100px;\n  border: 0; }\n\n#description {\n  font-family: Roboto;\n  font-size: 15px;\n  font-weight: 300; }\n\n#infowindow-content .title {\n  font-weight: bold; }\n\n#infowindow-content {\n  display: none; }\n\n#mapToUpdate #infowindow-content {\n  display: inline; }\n\n.pac-card {\n  margin: 10px 10px 0 0;\n  border-radius: 2px 0 0 2px;\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  outline: none;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);\n  background-color: #fff;\n  font-family: Roboto; }\n\n#pac-container {\n  padding-bottom: 12px;\n  margin-right: 12px; }\n\n.pac-controls {\n  display: inline-block;\n  padding: 5px 11px; }\n\n.pac-controls label {\n  font-family: Roboto;\n  font-size: 13px;\n  font-weight: 300; }\n\n#pac-input {\n  background-color: #fff;\n  font-family: Roboto;\n  font-size: 15px;\n  font-weight: 300;\n  margin-left: 12px;\n  padding: 0 11px 0 13px;\n  text-overflow: ellipsis;\n  width: 100%; }\n\n#pac-input:focus {\n  border-color: #4d90fe; }\n\n#title {\n  color: #fff;\n  background-color: #4d90fe;\n  font-size: 25px;\n  font-weight: 500;\n  padding: 6px 12px; }\n\n#target {\n  width: 345px; }\n\nselect {\n  width: 100%;\n  padding: 12px 20px;\n  margin: 0 0;\n  display: inline-block;\n  border: 1px solid #ccc;\n  box-sizing: border-box; }\n", ""]);
 
 // exports
 
@@ -733,7 +755,8 @@ var BussesLocComponent = (function () {
                         if (_this.drivers[d].panic === true) {
                             console.log(_this.drivers[d]._id + 'Is in Panic');
                             var markerIconPanic = {
-                                url: 'https://www.iconsdb.com/icons/preview/red/bus-2-xxl.png',
+                                //  url: 'https://www.iconsdb.com/icons/preview/red/bus-2-xxl.png',
+                                url: 'http://carpng.com/wp-content/uploads/full/red-bus-icon-2853-0.png',
                                 scaledSize: new google.maps.Size(80, 80),
                                 origin: new google.maps.Point(0, 0),
                                 anchor: new google.maps.Point(32, 65),
@@ -763,6 +786,48 @@ var BussesLocComponent = (function () {
             }
         });
     };
+    BussesLocComponent.prototype.chkDriverName = function () {
+        console.log('Selected Driver: ' + this.selectedDriver);
+        var driverPosToZoom = null;
+        var mapToZoom;
+        var selectedDriverMarker;
+        var selectedDriverName;
+        for (var t = 0; t < this.driversLength; t++) {
+            if (this.drivers[t]._id === this.selectedDriver) {
+                selectedDriverName = this.drivers[t].name;
+                if (this.drivers[t].loc) {
+                    console.log('Selected Driver Lat ' + this.drivers[t].loc[0]);
+                    console.log('Selected Driver Long ' + this.drivers[t].loc[1]);
+                    driverPosToZoom = {
+                        lat: this.drivers[t].loc[0],
+                        lng: this.drivers[t].loc[1]
+                    };
+                    break;
+                }
+            }
+        }
+        if (driverPosToZoom !== null) {
+            mapToZoom = new google.maps.Map(document.getElementById('mapToUpdate'), {
+                center: driverPosToZoom,
+                zoom: 20
+            });
+            var markerIcon = {
+                url: 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png',
+                scaledSize: new google.maps.Size(80, 80),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(32, 65),
+                labelOrigin: new google.maps.Point(40, 33)
+            };
+            selectedDriverMarker = new google.maps.Marker({
+                position: driverPosToZoom,
+                map: mapToZoom,
+                title: selectedDriverName,
+                // animation: google.maps.Animation.DROP,
+                label: { text: selectedDriverName, fontWeight: 'bold', color: 'black', fontSize: '16px' },
+                icon: markerIcon,
+            });
+        }
+    };
     return BussesLocComponent;
 }());
 BussesLocComponent = __decorate([
@@ -777,6 +842,49 @@ BussesLocComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=busses-loc.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/busses-loc/filter.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FilterPipe = (function () {
+    function FilterPipe() {
+    }
+    FilterPipe.prototype.transform = function (users, searchText) {
+        console.log('in Transform searchText : ' + searchText);
+        if (searchText == null) {
+            return users;
+        }
+        return users.filter(function (user) {
+            //  console.log ('in filter ' + JSON.stringify(user));
+            if (user.name) {
+                return user.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
+            }
+            else {
+                return '';
+            }
+        });
+    };
+    return FilterPipe;
+}());
+FilterPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Pipe */])({
+        name: 'filter'
+    })
+], FilterPipe);
+
+//# sourceMappingURL=filter.pipe.js.map
 
 /***/ }),
 
@@ -1169,7 +1277,13 @@ var DriverComponent = (function () {
                 console.log(u.status);
                 _this.router.navigate(['/drivers']);
                 _this.driver = null;
-            });
+            }, function (err) { window.confirm('Some Issue Occurred while Adding Driver !'); });
+            // u => {
+            //  this.ngOnInit();
+            //  console.log (u.status);
+            //  this.router.navigate(['/drivers']);
+            //  this.driver = null;
+            // });
             this.name = '';
             this.email = '';
             this.password = '';
@@ -1642,8 +1756,8 @@ var LocationOnMapComponent = (function () {
                     console.log('stopsPayload.status ' + stopsPayload.status);
                     // this.ngOnInit();
                     console.log('s.status: ' + s.status);
+                    _this.confirmStartLocMarkerPopup.hide();
                     if (stopsPayload.status === 'success') {
-                        _this.confirmStartLocMarkerPopup.hide();
                         window.confirm('Stop Successfully Added !');
                     }
                     else {
@@ -2323,6 +2437,288 @@ RestApiService = __decorate([
 
 var _a;
 //# sourceMappingURL=rest-api.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/rider/rider.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  rider works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/rider/rider.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/rider/rider.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RiderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RiderComponent = (function () {
+    function RiderComponent() {
+    }
+    RiderComponent.prototype.ngOnInit = function () {
+    };
+    return RiderComponent;
+}());
+RiderComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-rider',
+        template: __webpack_require__("../../../../../src/app/rider/rider.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/rider/rider.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], RiderComponent);
+
+//# sourceMappingURL=rider.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/riders/riders.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n  <!-- Content Wrapper. Contains page content -->\n  <div class=\"content-wrapper add-padding\">\n      <!-- Content Header (Page header) -->\n    <div class=\"content-header clearfix\">\n  <h2 class=\"pull-left\"  style=\"color:#232f3e\">\n  Riders\n  </h2>\n  <div class=\"pull-right\">\n  <a  routerLink=\"/driver\" routerLinkActive=\"active\"  class=\"btn bg-blue\">\n    <i class=\"fa fa-plus-square\"></i>\n    Add new\n  </a>\n\n  </div>\n  </div>\n\n      <!-- Main content -->\n      <section class=\"content\">\n          <!-- <div class=\"panel-group\"> -->\n          <!-- <div class=\"panel panel-default\"> -->\n          <!-- <div class=\"panel-body\"> -->\n              <!-- <div > -->\n          <table id=\"example\" class=\"table table-striped table-bordered\" cellspacing=\"0\" >\n\n          <thead >\n      <tr >\n      <!-- <th  style=\"text-align:center;\" ><input id=\"selectAll\" class=\"minimal\" type=\"checkbox\"></th> -->\n      <th  > # </th>\n      <th  >User Name</th>\n      <th  >Email</th>\n      <th  >Phone # </th>\n       <th >Panic </th>\n      <th>Options </th>\n\n      </tr>\n      </thead>\n              <tbody>\n                  <tr *ngFor=\"let user of users; let i = index\">\n\n                      <!-- <td style=\"text-align:center\" ><input type=\"checkbox\" class=\"minimal\" value=\"5\" ></td> -->\n                      <td>{{i + 1}}</td>\n                      <td >{{user.name}} </td>\n                      <td >{{user.email}}</td>\n                      <td >{{user.phone}}</td>\n                      <td >\n\n                      <!-- {{user.panic}} -->\n                        <div *ngIf=\"user.panic\" style=\"color:red;\">In Panic</div>\n                        <div *ngIf=\"!user.panic\">Normal</div>\n                      </td>\n                      <td>\n                        <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\" (click)=\"confirmEdit(user)\">&nbsp;&nbsp;</i>\n                        <i class=\"fa fa-trash-o\" aria-hidden=\"true\" (click)=\"confirmDelete(user)\"></i>\n                      </td>\n                    </tr>\n\n             <!-- <tr >\n                  <td style=\"text-align:center\" ><input type=\"checkbox\" class=\"minimal\" value=\"5\" ></td>\n                  <td >Sajid</td>\n                  <td >“Don't cry because it's over, smile because it happened.” </td>\n                  <td ><span class=\"badge bg-green\">on</span></td>\n              </tr>\n         <tr >\n                  <td style=\"text-align:center\" ><input type=\"checkbox\" class=\"minimal\" value=\"5\" ></td>\n                  <td >Sajid</td>\n                  <td >“Don't cry because it's over, smile because it happened.” </td>\n                  <td ><span class=\"badge bg-red\">off</span></td>\n              </tr>\n        <tr >\n                  <td style=\"text-align:center\" ><input type=\"checkbox\" class=\"minimal\" value=\"5\" ></td>\n                  <td >Sajid</td>\n                  <td >“Don't cry because it's over, smile because it happened.” </td>\n                  <td ><span class=\"badge bg-green\">on</span></td>\n              </tr> -->\n              </tbody>\n\n\n          </table>\n          <!-- </div> -->\n          <!-- </div> -->\n          <!-- </div> -->\n              <!-- </div> -->\n          <!-- </div> -->\n       </section>\n      <!-- /.content -->\n    </div>\n    <!-- /.content-wrapper -->\n\n    <popup #deletePopup (confirmClick)=\"deleteDriver()\">\n      <div>Are you sure, You want to Delete Driver ?</div>\n    </popup>\n\n\n    <popup  #editPopup (confirmClick)=\"editDriver()\">\n        <input   type=\"text\"  placeholder=\"Name\" name=\"name\" [(ngModel)]=\"name\" >\n        <input   type=\"text\"  placeholder=\"Email\" name=\"author\" [(ngModel)]=\"email\" >\n        <input   type=\"text\"  placeholder=\"Phone #\" name=\"author\" [(ngModel)]=\"phone\" >\n    </popup>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/riders/riders.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "input[type=text], input[type=password], input[type=number] {\n  width: 73%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  display: inline-block;\n  border: 1px solid #ccc;\n  box-sizing: border-box; }\n\ntextarea {\n  width: 73%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  display: inline-block;\n  border: 1px solid #ccc;\n  box-sizing: border-box; }\n\n.button {\n  background-color: #232f3e;\n  border: none;\n  color: white;\n  padding: 13px 18px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  margin: 4px 2px;\n  cursor: pointer;\n  font-weight: bold; }\n\n.add-padding {\n  padding-left: 1%;\n  padding-right: 1%;\n  padding-top: 1%; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/riders/riders.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RidersComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__riders_service__ = __webpack_require__("../../../../../src/app/riders/riders.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Models_Driver__ = __webpack_require__("../../../../../src/app/Models/Driver.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__ = __webpack_require__("../../../../ng2-opd-popup/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var RidersComponent = (function () {
+    function RidersComponent(ridersService, popup) {
+        this.ridersService = ridersService;
+        this.popup = popup;
+        this.users = [];
+        this.usersLength = 0;
+        this.popup.options = {
+            header: 'Confirmation',
+            color: '#232f3e',
+            widthProsentage: 40,
+            // animationDuration: 1, // in seconds, 0 = no animation
+            showButtons: true,
+            confirmBtnContent: 'OK',
+            cancleBtnContent: 'CANCEL',
+            confirmBtnClass: 'btn btn-bold',
+            cancleBtnClass: 'btn btn-bold',
+        };
+    }
+    RidersComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.ridersService
+            .getDrivers()
+            .subscribe(function (u) {
+            _this.users = u;
+            console.log('users :' + u);
+            _this.usersLength = _this.users.length;
+            // this.categoryLoaded=true;
+        });
+    };
+    RidersComponent.prototype.confirmEdit = function (driver) {
+        console.log('driver: ' + driver.name);
+        this.name = driver.name;
+        this.email = driver.email;
+        this.phone = driver.phone;
+        this.driverIdToEdit = driver._id;
+        this.editPopup.show(this.popup.options);
+    };
+    RidersComponent.prototype.editDriver = function () {
+        var _this = this;
+        // Update driver
+        this.tempUser = new __WEBPACK_IMPORTED_MODULE_2__Models_Driver__["a" /* Driver */]();
+        this.tempUser._id = this.driverIdToEdit;
+        this.tempUser.name = this.name;
+        this.tempUser.email = this.email;
+        this.tempUser.phone = this.phone;
+        console.log('Edit driver : ' + this.driverIdToEdit);
+        this.editPopup.hide();
+        this.ridersService.updateDriver(this.tempUser)
+            .subscribe(function (u) {
+            _this.ngOnInit();
+            console.log('Update Driver API Status ' + u.status);
+            _this.tempUser = null;
+        });
+        this.driverIdToEdit = '';
+    };
+    RidersComponent.prototype.confirmDelete = function (driver) {
+        console.log('driver Id To delete : ' + driver._id);
+        this.driverIdToDelete = driver._id;
+        this.deletePopup.show(this.popup.options);
+    };
+    RidersComponent.prototype.deleteDriver = function () {
+        var _this = this;
+        //  console.log ('Delete driver Called with Title : ' + this.driverIdToDelete);
+        this.deletePopup.hide();
+        this.ridersService
+            .deleteDriver(this.driverIdToDelete)
+            .subscribe(function (u) {
+            _this.ngOnInit();
+            console.log(u.status);
+            // this.tempCategory=null;
+        });
+    };
+    return RidersComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('editPopup'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__["a" /* Popup */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__["a" /* Popup */]) === "function" && _a || Object)
+], RidersComponent.prototype, "editPopup", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('deletePopup'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__["a" /* Popup */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__["a" /* Popup */]) === "function" && _b || Object)
+], RidersComponent.prototype, "deletePopup", void 0);
+RidersComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-riders',
+        template: __webpack_require__("../../../../../src/app/riders/riders.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/riders/riders.component.scss")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__riders_service__["a" /* RidersService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__riders_service__["a" /* RidersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__riders_service__["a" /* RidersService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__["a" /* Popup */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ng2_opd_popup__["a" /* Popup */]) === "function" && _d || Object])
+], RidersComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=riders.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/riders/riders.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RidersService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var RidersService = (function () {
+    function RidersService(http) {
+        this.http = http;
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
+            'Accept': 'q=0.8;application/json;q=0.9',
+        }); // ... Set content type to JSON
+        this.headers.append('x-auth-token', localStorage.getItem('x-auth-token'));
+        // this.headers.append('user-type', 'Admin');
+        this.options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
+    }
+    RidersService.prototype.getDrivers = function () {
+        // this.http.get(this.baseUrl + '/quotes', this.options ).subscribe(data => {
+        //   console.log('data' + data);
+        // });
+        return this.http.get(this.baseUrl + '/driver', this.options)
+            .map(function (res) { return res.json().object; });
+    };
+    // // Add new Category
+    // addMarkerCategory(markerCategoryToSet  ): Observable<Response> {
+    // let body = JSON.stringify(markerCategoryToSet);
+    // console.log ('in service Add Category : '+ markerCategoryToSet);
+    // 	return this.http
+    // 		.post(this.baseUrl + '/v2.0/markerCategory' ,  body ,  this.options)
+    // 		.map(this.extractData);
+    //   }
+    // Edit a Driver
+    RidersService.prototype.updateDriver = function (driver) {
+        var body = JSON.stringify(driver);
+        console.log('URL : ', this.baseUrl + '/driver/' + driver._id);
+        return this.http
+            .patch(this.baseUrl + '/driver/' + driver._id, body, this.options)
+            .map(this.extractData);
+    };
+    // Delete Driver
+    RidersService.prototype.deleteDriver = function (driverIdToDelete) {
+        var body = JSON.stringify(driverIdToDelete);
+        console.log('URL : ', this.baseUrl + '/driver/' + driverIdToDelete);
+        return this.http
+            .delete(this.baseUrl + '/driver/' + driverIdToDelete, this.options)
+            .map(this.extractData);
+    };
+    RidersService.prototype.extractData = function (res) {
+        var data = res.json();
+        return data || {};
+    };
+    return RidersService;
+}());
+RidersService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], RidersService);
+
+var _a;
+//# sourceMappingURL=riders.service.js.map
 
 /***/ }),
 
@@ -3504,7 +3900,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ShiftsService = (function () {
     function ShiftsService(http) {
         this.http = http;
-        //baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
+        // baseUrl: String= 'https://qau-smart-ride.herokuapp.com/api';
         this.baseUrl = 'https://nameless-plateau-38782.herokuapp.com/api';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json',
             'Accept': 'q=0.8;application/json;q=0.9',

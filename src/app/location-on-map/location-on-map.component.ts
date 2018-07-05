@@ -68,7 +68,7 @@ export class LocationOnMapComponent implements OnInit {
   });
 }
 
-confirmStartLoc(){
+confirmStartLoc() {
 
   this.locationObj = new Location();
     this.locationObj.title = this.locTitle;
@@ -94,8 +94,8 @@ confirmStartLoc(){
               console.log ('stopsPayload.status ' + stopsPayload.status);
               // this.ngOnInit();
               console.log ('s.status: ' + s.status);
+              this.confirmStartLocMarkerPopup.hide();
               if (stopsPayload.status === 'success') {
-                this.confirmStartLocMarkerPopup.hide();
                 window.confirm('Stop Successfully Added !');
                }else {
                 window.confirm('Some Issue Occurred while Adding Stop !');
@@ -106,7 +106,7 @@ confirmStartLoc(){
 
           });
 
-       }else{
+       }else {
         window.confirm('Some Issue Occurred while Adding Stop !');
         this.router.navigate(['/shifts']);
        }

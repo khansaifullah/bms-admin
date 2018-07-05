@@ -37,12 +37,20 @@ export class DriverComponent implements OnInit {
       this.driver.phone = this.phone;
       this.driver.user_type = 'driver';
       this.driverService.addDriver(this.driver).subscribe(
-        u => {
+       u => {
          this.ngOnInit();
          console.log (u.status);
          this.router.navigate(['/drivers']);
          this.driver = null;
-        });
+      },
+      (err) =>  {window.confirm('Some Issue Occurred while Adding Driver !'); }
+    );
+        // u => {
+        //  this.ngOnInit();
+        //  console.log (u.status);
+        //  this.router.navigate(['/drivers']);
+        //  this.driver = null;
+        // });
         this.name = '';
         this.email = '';
         this.password = '';

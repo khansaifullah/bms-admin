@@ -1,3 +1,4 @@
+import { FilterPipe } from './filter.pipe';
 import { Component, OnInit } from '@angular/core';
 import { DriversService } from '../drivers/drivers.service';
 import { Driver } from '../Models/Driver';
@@ -16,6 +17,9 @@ export class BussesLocComponent implements OnInit {
   sub: Subscription;
   drivers: Driver[] = [];
   driversLength: Number = 0;
+
+  searchText: string;
+  selectedDriver: string;
   constructor(private driversService: DriversService) {
      this.sub = Observable.interval(30000)
     .subscribe((val) => {
@@ -74,7 +78,8 @@ export class BussesLocComponent implements OnInit {
             if (this.drivers[d].panic === true) {
               console.log(this.drivers[d]._id + 'Is in Panic');
               const markerIconPanic = {
-                url: 'https://www.iconsdb.com/icons/preview/red/bus-2-xxl.png',
+               //  url: 'https://www.iconsdb.com/icons/preview/red/bus-2-xxl.png',
+                url: 'http://carpng.com/wp-content/uploads/full/red-bus-icon-2853-0.png',
                 scaledSize: new google.maps.Size(80, 80),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(32, 65),
@@ -96,17 +101,6 @@ export class BussesLocComponent implements OnInit {
                 // animation: google.maps.Animation.DROP,
                 label:  {text: driverName, fontWeight: 'bold', color: 'black',  fontSize: '16px'},
                 icon: markerIcon,
-               //  labelOrigin: new google.maps.Point(11, 50),
-               //  icon: {
-               //   labelOrigin: new google.maps.Point(11, 50),
-               //   url: 'default_marker.png',
-               //   size: new google.maps.Size(22, 40),
-               //   origin: new google.maps.Point(0, 0),
-               //   anchor: new google.maps.Point(11, 40),
-               // },
-               //  icon: image
-               //  labelClass: 'labels', // the CSS class for the label
-               //  labelStyle: {opacity: 0.75}
               });
 
             }
@@ -116,6 +110,52 @@ export class BussesLocComponent implements OnInit {
       }
       }
   );
+  }
+
+  chkDriverName() {
+    console.log('Selected Driver: ' + this.selectedDriver);
+    let driverPosToZoom = null;
+    let mapToZoom;
+    let selectedDriverMarker;
+    let selectedDriverName;
+
+    for (let t = 0; t < this.driversLength; t++) {
+
+      if (this.drivers[t]._id === this.selectedDriver) {
+
+        selectedDriverName = this.drivers[t].name;
+        if (this.drivers[t].loc) {
+          console.log('Selected Driver Lat ' +  this.drivers[t].loc[0]);
+          console.log('Selected Driver Long ' +  this.drivers[t].loc[1]);
+          driverPosToZoom = {
+            lat: this.drivers[t].loc[0],
+            lng: this.drivers[t].loc[1]
+            };
+             break;
+        }
+      }
+    }
+  if (driverPosToZoom !== null) {
+    mapToZoom = new google.maps.Map(document.getElementById('mapToUpdate'), {
+      center: driverPosToZoom,
+      zoom: 20
+  });
+  const markerIcon = {
+    url: 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png',
+    scaledSize: new google.maps.Size(80, 80),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(32, 65),
+    labelOrigin: new google.maps.Point(40, 33)
+  };
+  selectedDriverMarker = new google.maps.Marker({
+    position: driverPosToZoom,
+    map: mapToZoom,
+    title: selectedDriverName,
+    // animation: google.maps.Animation.DROP,
+    label:  {text: selectedDriverName, fontWeight: 'bold', color: 'black',  fontSize: '16px'},
+    icon: markerIcon,
+  });
+  }
 
   }
 }
