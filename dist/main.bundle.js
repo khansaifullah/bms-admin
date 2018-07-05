@@ -792,8 +792,15 @@ var BussesLocComponent = (function () {
         var mapToZoom;
         var selectedDriverMarker;
         var selectedDriverName;
+        var urlIcon;
         for (var t = 0; t < this.driversLength; t++) {
             if (this.drivers[t]._id === this.selectedDriver) {
+                if (this.drivers[t].panic === true) {
+                    urlIcon = 'http://carpng.com/wp-content/uploads/full/red-bus-icon-2853-0.png';
+                }
+                else {
+                    urlIcon = 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png';
+                }
                 selectedDriverName = this.drivers[t].name;
                 if (this.drivers[t].loc) {
                     console.log('Selected Driver Lat ' + this.drivers[t].loc[0]);
@@ -812,7 +819,7 @@ var BussesLocComponent = (function () {
                 zoom: 20
             });
             var markerIcon = {
-                url: 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png',
+                url: urlIcon,
                 scaledSize: new google.maps.Size(80, 80),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(32, 65),

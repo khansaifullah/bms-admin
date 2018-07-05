@@ -118,11 +118,16 @@ export class BussesLocComponent implements OnInit {
     let mapToZoom;
     let selectedDriverMarker;
     let selectedDriverName;
+    let urlIcon;
 
     for (let t = 0; t < this.driversLength; t++) {
 
       if (this.drivers[t]._id === this.selectedDriver) {
-
+        if ( this.drivers[t].panic === true) {
+          urlIcon =  'http://carpng.com/wp-content/uploads/full/red-bus-icon-2853-0.png';
+        }else {
+          urlIcon = 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png';
+        }
         selectedDriverName = this.drivers[t].name;
         if (this.drivers[t].loc) {
           console.log('Selected Driver Lat ' +  this.drivers[t].loc[0]);
@@ -141,7 +146,7 @@ export class BussesLocComponent implements OnInit {
       zoom: 20
   });
   const markerIcon = {
-    url: 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png',
+    url: urlIcon,
     scaledSize: new google.maps.Size(80, 80),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(32, 65),
