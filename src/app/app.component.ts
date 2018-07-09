@@ -40,10 +40,15 @@ export class AppComponent implements OnInit {
       console.log('inside OneSignal.push(function () {');
       // Occurs when the user's subscription changes to a new value.
       OneSignal.on('subscriptionChange', function (isSubscribed) {
-        console.log("The user's subscription state is now:", isSubscribed);
-        OneSignal.getUserId().then(function (userId) {
-          console.log('User ID is', userId);
-        });
+        if (isSubscribed) {
+          console.log("The user's subscription state is now:", isSubscribed);
+          OneSignal.getUserId().then(function (userId) {
+            console.log('User ID is', userId);
+          });
+        }else{
+          console.log('Is Not Subscribed');
+        }
+
       });
     });
     }
