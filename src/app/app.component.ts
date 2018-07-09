@@ -34,8 +34,10 @@ export class AppComponent implements OnInit {
     OneSignal.push(function () {
       console.log('Register For Push');
       OneSignal.push(['registerForPushNotifications']);
+      console.log('After Calling');
     });
     OneSignal.push(function () {
+      console.log('inside OneSignal.push(function () {');
       // Occurs when the user's subscription changes to a new value.
       OneSignal.on('subscriptionChange', function (isSubscribed) {
         console.log("The user's subscription state is now:", isSubscribed);
