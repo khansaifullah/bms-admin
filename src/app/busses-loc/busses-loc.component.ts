@@ -143,7 +143,7 @@ export class BussesLocComponent implements OnInit {
   if (driverPosToZoom !== null) {
     mapToZoom = new google.maps.Map(document.getElementById('mapToUpdate'), {
       center: driverPosToZoom,
-      zoom: 20
+      zoom: 17
   });
   const markerIcon = {
     url: urlIcon,
