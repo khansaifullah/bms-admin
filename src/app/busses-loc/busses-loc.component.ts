@@ -21,7 +21,7 @@ export class BussesLocComponent implements OnInit {
   searchText: string;
   selectedDriver: string;
   constructor(private driversService: DriversService) {
-     this.sub = Observable.interval(30000)
+     this.sub = Observable.interval(90000)
     .subscribe((val) => {
       console.log('Update!');
       this.ngOnInit();
