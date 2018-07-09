@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from './data.service';
 
-declare var $:any;
+declare var $: any;
 // Component App
 @Component({
   selector: 'app-root',
@@ -20,37 +20,37 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
-    var OneSignal = window['OneSignal'] || [];
-    console.log('Init OneSignal');
-    OneSignal.push(['init', {
-      appId: '64034311-fb3a-4582-8877-b3854a0aed5d',
-      autoRegister: false,
-      allowLocalhostAsSecureOrigin: true,
-      notifyButton: {
-        enable: false
-      }
-    }]);
-    console.log('OneSignal Initialized');
-    OneSignal.push(function () {
-      console.log('Register For Push');
-      OneSignal.push(['registerForPushNotifications']);
-      console.log('After Calling');
-    });
-    OneSignal.push(function () {
-      console.log('inside OneSignal.push(function () {');
-      // Occurs when the user's subscription changes to a new value.
-      OneSignal.on('subscriptionChange', function (isSubscribed) {
-        if (isSubscribed) {
-          console.log("The user's subscription state is now:", isSubscribed);
-          OneSignal.getUserId().then(function (userId) {
-            console.log('User ID is', userId);
-          });
-        }else{
-          console.log('Is Not Subscribed');
-        }
+    // var OneSignal = window['OneSignal'] || [];
+    // console.log('Init OneSignal');
+    // OneSignal.push(['init', {
+    //   appId: '64034311-fb3a-4582-8877-b3854a0aed5d',
+    //   autoRegister: false,
+    //   allowLocalhostAsSecureOrigin: true,
+    //   notifyButton: {
+    //     enable: false
+    //   }
+    // }]);
+    // console.log('OneSignal Initialized');
+    // OneSignal.push(function () {
+    //   console.log('Register For Push');
+    //   OneSignal.push(['registerForPushNotifications']);
+    //   console.log('After Calling');
+    // });
+    // OneSignal.push(function () {
+    //   console.log('inside OneSignal.push(function () {');
+    //   // Occurs when the user's subscription changes to a new value.
+    //   OneSignal.on('subscriptionChange', function (isSubscribed) {
+    //     if (isSubscribed) {
+    //       console.log("The user's subscription state is now:", isSubscribed);
+    //       OneSignal.getUserId().then(function (userId) {
+    //         console.log('User ID is', userId);
+    //       });
+    //     }else {
+    //       console.log('Is Not Subscribed');
+    //     }
 
-      });
-    });
+    //   });
+    // });
     }
   get token() {
     return localStorage.getItem('x-auth-token');

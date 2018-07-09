@@ -34,7 +34,7 @@ export class BussesLocComponent implements OnInit {
 
     // https://www.iconsdb.com/icons/preview/red/bus-xxl.png
   const markerIcon = {
-    url: 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png',
+    url: 'https://image.flaticon.com/icons/svg/0/622.svg',
     scaledSize: new google.maps.Size(80, 80),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(32, 65),
@@ -90,7 +90,7 @@ export class BussesLocComponent implements OnInit {
                 map: mapToUpdate,
                 title: driverName,
                 // animation: google.maps.Animation.DROP,
-                label:  {text: driverName, fontWeight: 'bold', color: 'black',  fontSize: '16px'},
+                label:  {text: driverName, fontWeight: 'bold', color: 'green',  fontSize: '16px'},
                 icon: markerIconPanic,
               });
             }else {
@@ -99,7 +99,7 @@ export class BussesLocComponent implements OnInit {
                 map: mapToUpdate,
                 title: driverName,
                 // animation: google.maps.Animation.DROP,
-                label:  {text: driverName, fontWeight: 'bold', color: 'black',  fontSize: '16px'},
+                label:  {text: driverName, fontWeight: 'bold', color: 'green',  fontSize: '16px'},
                 icon: markerIcon,
               });
 
@@ -126,7 +126,7 @@ export class BussesLocComponent implements OnInit {
         if ( this.drivers[t].panic === true) {
           urlIcon =  'http://carpng.com/wp-content/uploads/full/red-bus-icon-2853-0.png';
         }else {
-          urlIcon = 'https://www.freeiconspng.com/uploads/school-bus-icon-22.png';
+          urlIcon = 'https://image.flaticon.com/icons/svg/0/622.svg';
         }
         selectedDriverName = this.drivers[t].name;
         if (this.drivers[t].loc) {
@@ -157,7 +157,7 @@ export class BussesLocComponent implements OnInit {
     map: mapToZoom,
     title: selectedDriverName,
     // animation: google.maps.Animation.DROP,
-    label:  {text: selectedDriverName, fontWeight: 'bold', color: 'black',  fontSize: '16px'},
+    label:  {text: selectedDriverName, fontWeight: 'bold', color: 'green',  fontSize: '16px'},
     icon: markerIcon,
   });
   }

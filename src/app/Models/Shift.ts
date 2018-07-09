@@ -9,6 +9,9 @@ export class Shift {
   startLoc: Number[];
   endLoc: Number[];
   listOfStops: Stop[];
+  shiftStatus: Boolean;
+  vehicle: String;
+
 
 }
 
