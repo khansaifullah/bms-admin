@@ -65,7 +65,7 @@ export class BussesLocComponent implements OnInit {
 
           mapToUpdate = new google.maps.Map(document.getElementById('mapToUpdate'), {
           center: tempPosMap,
-          zoom: 15
+          zoom: 10
       });
         for (let d = 0; d < this.driversLength; d++) {
           if (this.drivers[d].loc) {
