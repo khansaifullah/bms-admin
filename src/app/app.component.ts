@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from './data.service';
 
@@ -10,7 +10,7 @@ declare var $:any;
   styleUrls: ['./app.component.scss'],
 
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   searchTerm = '';
   isCollapsed = true;
 
@@ -18,6 +18,33 @@ export class AppComponent {
     this.data.getProfile();
   }
 
+
+  ngOnInit() {
+    var OneSignal = window['OneSignal'] || [];
+    console.log('Init OneSignal');
+    OneSignal.push(['init', {
+      appId: '64034311-fb3a-4582-8877-b3854a0aed5d',
+      autoRegister: false,
+      allowLocalhostAsSecureOrigin: true,
+      notifyButton: {
+        enable: false
+      }
+    }]);
+    console.log('OneSignal Initialized');
+    OneSignal.push(function () {
+      console.log('Register For Push');
+      OneSignal.push(['registerForPushNotifications']);
+    });
+    OneSignal.push(function () {
+      // Occurs when the user's subscription changes to a new value.
+      OneSignal.on('subscriptionChange', function (isSubscribed) {
+        console.log("The user's subscription state is now:", isSubscribed);
+        OneSignal.getUserId().then(function (userId) {
+          console.log('User ID is', userId);
+        });
+      });
+    });
+    }
   get token() {
     return localStorage.getItem('x-auth-token');
   }

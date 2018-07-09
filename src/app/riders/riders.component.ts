@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { RidersService } from './riders.service';
 import { Driver } from '../Models/Driver';
+import { Rider } from '../Models/Rider';
 import {Popup} from 'ng2-opd-popup';
 
 @Component({
@@ -22,7 +23,7 @@ export class RidersComponent implements OnInit {
   name: String;
   phone: String;
 
-  users: Driver[] = [];
+  users: Rider[] = [];
   usersLength: Number = 0;
   driverIdToEdit: String;
   driverIdToDelete: String;

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Quote } from '../Models/Quote';
+import { Rider } from '../Models/Rider';
 import { Driver } from '../Models/Driver';
 
 @Injectable()
@@ -22,13 +23,9 @@ export class RidersService {
     this.options = new RequestOptions({ headers: this.headers });
   }
 
-    getDrivers(): Observable<Driver[]> {
-
-      // this.http.get(this.baseUrl + '/quotes', this.options ).subscribe(data => {
-      //   console.log('data' + data);
-      // });
-      return this.http.get(this.baseUrl + '/driver', this.options)
-      .map(res => <Driver[]>res.json().object);
+    getDrivers(): Observable<Rider[]> {
+      return this.http.get(this.baseUrl + '/riders', this.options)
+      .map(res => <Rider[]>res.json().object);
 
   }
 
