@@ -23,6 +23,10 @@ export class DashboardComponent implements OnInit {
   overSpeedAlertLength: Number;
   shifts: Shift[] ;
   shiftsLength: Number;
+  datasetarray: any[]= [];
+  datasetObject: any;
+  borderColorsAray: string[]= ['#3e95cd', '#8e5ea2', '#42f492', '#71f441', '#9d41f4', '#f47041'];
+  tempBdColor: string;
 
   constructor(private dashboardService: DashboardService, private shiftsService: ShiftsService) { }
 
@@ -60,23 +64,43 @@ export class DashboardComponent implements OnInit {
       this.overSpeedAlertLength = this.overSpeedAlert.length;
       // this.categoryLoaded=true;
 
+      for (let o = 0; o < this.overSpeedAlertLength; o++) {
+
+        if (o < this.borderColorsAray.length) {
+          this.tempBdColor = this.borderColorsAray[o];
+        }else {
+          this.tempBdColor = this.borderColorsAray[(this.borderColorsAray.length) - 1];
+        }
+        this.datasetObject = {
+          // data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+          data: [ 0, this.overSpeedAlert[o].count],
+          label: this.overSpeedAlert[o].drivername,
+          // label: 'Driver 1',
+          borderColor: this.tempBdColor,
+          fill: false
+        };
+        this.datasetarray.push(this.datasetObject);
+      }
+
 
   new Chart(document.getElementById("line-chart"), {
     type: 'line',
     data: {
-      labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-      datasets: [{
-          data: [86,114,106,106,107,111,133,221,783,2478],
-          label: "Driver 1",
-          borderColor: "#3e95cd",
-          fill: false
-        }, {
-          data: [282,350,411,502,635,809,947,1402,3700,5267],
-          label: "Driver 2",
-          borderColor: "#8e5ea2",
-          fill: false
-        }
-      ]
+      labels: ['',new Date().toDateString()],
+      datasets:this.datasetarray
+      // datasets:
+      //  [{
+      //     data: [86,114,106,106,107,111,133,221,783,2478],
+      //     label: "Driver 1",
+      //     borderColor: "#3e95cd",
+      //     fill: false
+      //   }, {
+      //     data: [282,350,411,502,635,809,947,1402,3700,5267],
+      //     label: "Driver 2",
+      //     borderColor: "#8e5ea2",
+      //     fill: false
+      //   }
+      // ]
     },
     options: {
       title: {
@@ -101,8 +125,8 @@ export class DashboardComponent implements OnInit {
       url: 'https://image.flaticon.com/icons/svg/0/622.svg',
       scaledSize: new google.maps.Size(80, 80),
       origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(32,65),
-      labelOrigin: new google.maps.Point(40,33)
+      anchor: new google.maps.Point(32, 65),
+      labelOrigin: new google.maps.Point(40, 33)
     };
     marker = new google.maps.Marker({
       position: ISB,

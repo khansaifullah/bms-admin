@@ -1,6 +1,6 @@
 export class OverSpeedAlert {
       _id: string;
-      _driverId: string ;
-      speed: Number;
+      count: Number;
+      drivername: string;
 }
 
